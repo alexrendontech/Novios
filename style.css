@@ -1,0 +1,109 @@
+/* Fondo */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Corazones flotando */
+#heartsBackground::before,
+#heartsBackground::after {
+  content: "💖 💕 💓 💗 💘";
+  font-size: 2rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: floatHearts 12s linear infinite;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+@keyframes floatHearts {
+  0% {transform: translateY(100vh);}
+  100% {transform: translateY(-10vh);}
+}
+
+/* Contenedor */
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  max-width: 500px;
+  z-index: 2;
+  position: relative;
+}
+
+/* Títulos */
+h1 {
+  font-size: 2rem;
+  color: #e91e63;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #c2185b;
+}
+
+/* Botones */
+button {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d81b60;
+}
+
+/* Mensajes */
+#messages {
+  margin-top: 2rem;
+}
+
+#messageText {
+  font-size: 1.3rem;
+  color: #555;
+  min-height: 100px;
+}
+
+/* Carta Final */
+#finalLetter {
+  margin-top: 2rem;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Canvas de fuegos artificiales */
+#fireworks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Ocultar */
+.hidden {
+  display: none;
+}
